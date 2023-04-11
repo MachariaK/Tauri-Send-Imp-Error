@@ -7,7 +7,11 @@ const name = ref("");
 
 async function greet() {
   // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-  greetMsg.value = await invoke("greet", { name: name.value });
+  await invoke('upload_users_in_bulk',
+    {
+      usersData: []
+    }
+  )
 }
 </script>
 

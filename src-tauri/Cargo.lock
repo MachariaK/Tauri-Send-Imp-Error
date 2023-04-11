@@ -5603,12 +5603,14 @@ dependencies = [
 name = "tauri-app"
 version = "0.0.0"
 dependencies = [
+ "chrono",
  "prisma-client-rust",
  "prisma-client-rust-cli",
  "serde",
  "serde_json",
  "tauri",
  "tauri-build",
+ "tokio",
 ]
 
 [[package]]

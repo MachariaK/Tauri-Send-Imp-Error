@@ -18,7 +18,8 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", rev = "6dba39780435acf14705873396f990befbb3a9bd" }
 prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", rev = "6dba39780435acf14705873396f990befbb3a9bd" }
-
+tokio = { version = "1.26.0", features = ["full"] }
+chrono = "0.4"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

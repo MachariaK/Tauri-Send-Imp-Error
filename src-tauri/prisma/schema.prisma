@@ -1,0 +1,21 @@
+generator client {
+  provider = "cargo run --bin prisma"
+  output   = "../src/prisma.rs"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:../sociapensify.db"
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  title         String?
+  surname       String
+  first_name    String
+  other_names   String?
+  gender        String
+  date_of_birth DateTime
+  updated_at    DateTime @updatedAt
+  created_at    DateTime @default(now())
+}
