@@ -1,0 +1,26 @@
+[package]
+name = "tauri-app"
+version = "0.0.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.2", features = [] }
+
+[dependencies]
+tauri = { version = "1.2", features = ["shell-open"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+prisma-client-rust = { git = "https://github.com/Brendonovich/prisma-client-rust", rev = "6dba39780435acf14705873396f990befbb3a9bd" }
+prisma-client-rust-cli = { git = "https://github.com/Brendonovich/prisma-client-rust", rev = "6dba39780435acf14705873396f990befbb3a9bd" }
+
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
